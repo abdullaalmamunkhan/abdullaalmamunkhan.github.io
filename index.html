@@ -27,7 +27,117 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/MamunHeader.css" rel="stylesheet">
+  <link href="sass/Sassstyle.css" rel="stylesheet">
+
   
+  <style type="text/css">
+		@font-face {
+		font-weight: 400;
+		font-style:  normal;
+		font-family: 'Circular-Loom';
+		
+		src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+		}
+		
+		@font-face {
+		font-weight: 500;
+		font-style:  normal;
+		font-family: 'Circular-Loom';
+		
+		src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+		}
+		
+		@font-face {
+		font-weight: 700;
+		font-style:  normal;
+		font-family: 'Circular-Loom';
+		
+		src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+		}
+		
+		@font-face {
+		font-weight: 900;
+		font-style:  normal;
+		font-family: 'Circular-Loom';
+		
+		src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+		}
+
+		.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+
+		/* ---------------------------------CSS FOR EXPREIENCE ----------------------------*/
+		</style>
 
   <!-- =======================================================
   * Template Name: MyResume - v4.7.0
@@ -491,11 +601,9 @@
   
       <section id="skills" class="skills section-bg">
         <div class="container skill-bars">
-          <div class="row ">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-              <h2>Skills</h2>
-            </div>
-          </div>
+          <div class="section-title">
+            <h2>My SKILLS</h2>
+           </div>
     
           <div class="row">
             <div class="col-lg-12 col-md-12 pull-left"><h3 class="timeline-title ">HARD SKILLS</h3></div>
@@ -637,7 +745,7 @@
           <h2 style="color: black !important;">Hire Me!</h2>
           <h4>“I think people hire me because I am good at what I love to do.”</h4>
           <p style="color: black;">My work speaks for the goals of my clients; it’s crafted carefully.Design and Development is not just my passion, it’s a big part of my lifestyle. </p>
-          <p><a href="https://drive.google.com/file/d/1fG4nX9ksoosv68dXr8lcV7oVCxVshV0f/view?usp=sharing" target="_blank" class="btn btn-primary" style="color: #fff; background-color: #FF9000; padding-top: 17px;">Download Resume</a></p>
+          <p><a href="assets/MyCv/Al_Mamun.docx" target="_blank" class="btn btn-primary" style="color: #fff; background-color: #FF9000; padding-top: 17px;">Download Resume</a></p>
         
           <p>&copy; 2022 almamunkhan.aiub@gmail.com  All Rights Reserved. <br>Designed by <a href="https://www.facebook.com/nusmakhan/" target="_blank">Abdulla Al Mamun</a> </p>
         </div>
@@ -666,10 +774,26 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+ 
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script src="js/js/main.js"></script>
 
 </body>
 
 </html>
+<script>
+	jQuery(document).ready(function(){
+	jQuery('.skillbar').mouseenter(function(){
+		jQuery(this).find('.skillbar-bar').animate({ 
+			width:jQuery(this).attr('data-percent')
+		},6000);
+	});	
+});
+
+</script>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
