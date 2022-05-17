@@ -24,13 +24,302 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link href="assets/css/MamunHeader.css" rel="stylesheet">
   <link href="sass/Sassstyle.css" rel="stylesheet">
 
   
   <style type="text/css">
+    .skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+.js .animate-box {
+  opacity: 0;
+}
+
+.fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+}
+.fh5co-social-icons li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.fh5co-social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  color: #FF9000;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.fh5co-social-icons li a i {
+  font-size: 20px;
+}
+
+#fh5co-about .fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+}
+#fh5co-about .fh5co-social-icons li {
+  padding: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+#fh5co-about .fh5co-social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  color: #fff;
+  background: #2F3C4F;
+  padding: 10px 10px 2px 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+#fh5co-about .fh5co-social-icons li a i {
+  font-size: 20px;
+}
+#fh5co-about .fh5co-social-icons li a:hover {
+  background: #FF9000;
+}
+
+.fh5co-heading {
+  margin-bottom: 5em;
+}
+.fh5co-heading.fh5co-heading-sm {
+  margin-bottom: 2em;
+}
+.fh5co-heading h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #000;
+}
+.fh5co-heading p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #828282;
+}
+.fh5co-heading span {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+#fh5co-features {
+  background: #111111;
+}
+#fh5co-features h2 {
+  color: #fff;
+}
+#fh5co-features .services-padding {
+  padding: 7em 0;
+}
+#fh5co-features .feature-left {
+  margin-bottom: 40px;
+  float: left;
+}
+@media screen and (max-width: 992px) {
+  #fh5co-features .feature-left {
+    margin-bottom: 30px;
+  }
+}
+#fh5co-features .feature-left .icon {
+  display: table;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#fh5co-features .feature-left .icon i {
+  font-size: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  color: #FF9000 !important;
+}
+#fh5co-features .feature-left .feature-copy {
+  width: 100%;
+}
+
+.skill-mf span {
+  color: #4e4e4e;
+}
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #0078ff;
+}
+
+/*======================================
+//--//-->   SERVICES
+======================================*/
+
+.service-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.service-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #0078ff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.service-box .service-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+  margin-top: 20px;
+}
+
+.service-box .ico-circle {
+  transition: all 500ms ease;
+  font-size: 6.5rem;
+}
+
+.service-box .s-title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2.4rem 0;
+  color: black  !important;
+}
+
+.service-box .s-description {
+  color: #4e4e4e;
+}
+#fh5co-features .feature-left h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+#fh5co-features .feature-left p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+#fh5co-features .feature-left p:last-child {
+  margin-bottom: 0;
+}
+#fh5co-features .feature-left p a {
+  color: #000 !important;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 20px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 2px;
+  background-color: #e6e6e6;
+  left: 50%;
+  margin-left: 0px;
+}
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
 		@font-face {
 		font-weight: 400;
 		font-style:  normal;
@@ -145,6 +434,18 @@ width:110px;
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <script>
+  
+    jQuery(document).ready(function(){
+    jQuery('.skillbar').mouseenter(function(){
+      jQuery(this).find('.skillbar-bar').animate({ 
+        width:jQuery(this).attr('data-percent')
+      },6000);
+    });	
+  });
+  
+  </script>
 </head>
 
 <body>
@@ -189,9 +490,16 @@ width:110px;
             <h1>Abdulla Al Mamun Khan</h1>
             <p>I'm <span class="typed" data-typed-items="Full-stack .Net developer"></span></p>
             <div class="social-links">
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <p>
+                <ul class="fh5co-social-icons">
+                  <!-- <li><a href="#" target="_blank"><i class="icon-twitter2"></i></a></li> -->
+                  <li><a href="https://www.facebook.com/profile.php?id=100004819908803" target="_blank"><i class="icon-facebook3"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/shafiqul-islam-talukder-46936418a/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+                  
+                </ul>
+              </p>
             </div>
+           
           <div class="fall">
               
             <div class="walls">
@@ -304,7 +612,7 @@ width:110px;
                       <div class="timeline-panel">
                         <div class="timeline-heading">
                           <h3 class="timeline-title">.Net Software Engineer</h3>
-                          <span class="company">SSLE(Software Solution & Log: LTD) - 05/2021 - Current</span>
+                          <span class="company">SSLE(Software solution and logistic enterperise) - 05/2021 - Current</span>
                         </div>
                         <div class="timeline-body">
                           <p>
@@ -690,8 +998,8 @@ width:110px;
 
 
     <footer id="footer">
-      <div class="container" style="margin-left: 90px;">
-        <div class="copyright">
+      <div class="container">
+        <div class="copyright" style="margin-left: 90px;">
           <h2 style="color: black !important;">Hire Me!</h2>
           <h4>“I think people hire me because I am good at what I love to do.”</h4>
           <p style="color: black;">My work speaks for the goals of my clients; it’s crafted carefully.Design and Development is not just my passion, it’s a big part of my lifestyle. </p>
@@ -711,6 +1019,9 @@ width:110px;
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<script src="https://d33wubrfki0l68.cloudfront.net/bundles/ebb7f15f14cfd10ffb2f830afc393bac8ece98df.js"></script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -726,24 +1037,30 @@ width:110px;
   <script src="assets/js/main.js"></script>
  
 
+  <script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Easy PieChart -->
+	<script src="js/jquery.easypiechart.min.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+
+
+	<!-- Main -->
 
 	<script src="js/js/main.js"></script>
 
 </body>
 
 </html>
-<script>
-	jQuery(document).ready(function(){
-	jQuery('.skillbar').mouseenter(function(){
-		jQuery(this).find('.skillbar-bar').animate({ 
-			width:jQuery(this).attr('data-percent')
-		},6000);
-	});	
-});
 
-</script>
+
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
